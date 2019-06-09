@@ -1,0 +1,11 @@
+#basic employee input table invoked using SQLite Studio
+
+CREATE TABLE employees (
+    employeeid INTEGER      PRIMARY KEY
+                            UNIQUE,
+    name       VARCHAR (30),
+    username   VARCHAR (15),
+    password   VARCHAR (15),
+    email      VARCHAR (30),
+    roleid     INT          REFERENCES roles (roleid) 
+);
